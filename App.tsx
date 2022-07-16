@@ -7,7 +7,8 @@ import store from "./src/services/redux/store";
 import LocalStorage from "./src/services/helper/LocalStorage";
 import { I18nManager } from "react-native";
 import { NativeBaseProvider } from "native-base";
-import AppNavigator from "./src/navigations/AppNavigator copy";
+import AppNavigator from "./src/navigations/AppNavigator";
+// import AppNavigator from "./src/navigations/AppNavigator copy";
 // enable reactotron.
 // require('./ReactotronConfig');
 
