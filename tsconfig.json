@@ -1,0 +1,14 @@
+
+
+{
+  "scripts": "true",
+  "typeRoots": ["./types", "./node_modules/@types"],
+
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "Cards/*": ["*"]
+    },
+    "lib": ["es5", "es6", "dom", "dom.iterable"]
+  }
+}
