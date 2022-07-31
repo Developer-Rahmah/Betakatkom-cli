@@ -1,5 +1,5 @@
 export enum Colors {
-  BLACK = '#161615',
+  BLACK = '#000000',
   WHITE = '#FFFFFF',
   RED = '#D1524F',
   BLUE = 'rgb(78,156,246)',
@@ -15,4 +15,7 @@ export enum Colors {
   LIGHT_GRAY3 = '#898989',
   GOLD = 'rgb(247,216,115)',
   RED2 = '#e60000',
+  secondaryColor = 'rgb(96,171,81)',
+  mainColor = 'rgb(225,112,55)',
+  primaryColor = 'rgb(238,164,64)',
 }

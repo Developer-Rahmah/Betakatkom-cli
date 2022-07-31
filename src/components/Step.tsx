@@ -20,10 +20,10 @@ const firstIndicatorStyles = {
   currentStepIndicatorSize: 40,
   separatorStrokeWidth: 3,
   currentStepStrokeWidth: 5,
-  separatorFinishedColor: Colors.PURPLE,
-  separatorUnFinishedColor: Colors.LIGHT_PURPLE,
-  stepIndicatorFinishedColor: Colors.PURPLE,
-  stepIndicatorUnFinishedColor: Colors.LIGHT_PURPLE,
+  separatorFinishedColor: Colors.mainColor,
+  separatorUnFinishedColor: Colors.secondaryColor,
+  stepIndicatorFinishedColor: Colors.mainColor,
+  stepIndicatorUnFinishedColor: Colors.secondaryColor,
   stepIndicatorCurrentColor: '#ffffff',
   stepIndicatorLabelFontSize: 15,
   currentStepIndicatorLabelFontSize: 15,
@@ -32,18 +32,18 @@ const firstIndicatorStyles = {
   stepIndicatorLabelUnFinishedColor: 'rgba(255,255,255,0.5)',
   labelColor: '#666666',
   labelSize: 12,
-  stepStrokeCurrentColor: Colors.PURPLE,
-  currentStepLabelColor: Colors.PURPLE,
+  stepStrokeCurrentColor: Colors.mainColor,
+  currentStepLabelColor: Colors.mainColor,
 };
 const Step = ({
   currentPage,
   labels
 }: {
-    currentPage:number;
-    labels:string[]
+  currentPage: number;
+  labels: string[]
 }) => {
   const navigation = useNavigation();
-  
+
   const renderLabel = ({
     position,
     label,
@@ -82,7 +82,7 @@ export default Step;
 
 
 const styles = StyleSheet.create({
- 
+
   stepIndicator: {
     paddingTop: 45,
     width: SCREEN_WIDTH
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
     textAlign: 'center',
     fontWeight: '500',
-    color: Colors.PURPLE,
+    color: Colors.mainColor,
   },
   padding: { padding: 10 },
   marginVertical: {

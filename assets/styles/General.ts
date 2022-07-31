@@ -23,7 +23,7 @@ const General = StyleSheet.create({
   },
 
   greenBackground: {
-    backgroundColor: Colors.PURPLE,
+    backgroundColor: Colors.mainColor,
   },
 
   transparentBackground: {
@@ -40,7 +40,7 @@ const General = StyleSheet.create({
     paddingHorizontal: 10,
   },
   color: {
-    color: Colors.PURPLE,
+    color: Colors.mainColor,
   },
   underline: {
     textDecorationLine: 'underline',

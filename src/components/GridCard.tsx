@@ -343,7 +343,7 @@ const GridCard = ({
         <GridView  >
           {/* <Animated.View style={{ transform: [{ scale: anim.current }] }}> */}
           {/* </Animated.View> */}
-          {/* <Title style={{ fontSize: SCREEN_HEIGHT / 50, marginTop: -25 }} title={title === 'Egyptian Cards' ? 'EGP' : 'JOD'} color={title === 'ZAIN' ? Colors.PURPLE : title === 'ORANGE' ? Colors.WHITE : title === 'UMNIAH' ? Colors.SAMI_BLACK : Colors.WHITE} /> */}
+          {/* <Title style={{ fontSize: SCREEN_HEIGHT / 50, marginTop: -25 }} title={title === 'Egyptian Cards' ? 'EGP' : 'JOD'} color={title === 'ZAIN' ? Colors.mainColor : title === 'ORANGE' ? Colors.WHITE : title === 'UMNIAH' ? Colors.SAMI_BLACK : Colors.WHITE} /> */}
           {title === 'ZAIN' || title === 'ORANGE' || title === 'UMNIAH' ?
             <>
               <Animated.View style={{ transform: [{ scale: anim.current }] }}>
@@ -356,7 +356,7 @@ const GridCard = ({
             :
             <View style={[styles.whiteBox, { backgroundColor: item.image === null ? 'white' : 'black', width: item.image === null ? '90%' : '100%', height: item.image === null ? '55%' : '70%', opacity: item.image === null ? 1 : .7 }]}>
               <Title style={{ fontSize: 35, marginBottom: -9 }} title={I18nManager.isRTL ? item.nameArabic : item.nameEnglish} color={title === 'ZAIN' ? Colors.ZAIN_COLOR : title === 'ORANGE' ? Colors.WHITE : title === 'UMNIAH' ? Colors.WHITE : Colors.WHITE} />
-              <Title style={{ fontSize: 25, color: item.image === null ? Colors.PURPLE : Colors.WHITE }} title={parseFloat(userInfo.class === 'A' ? item.priceA : userInfo.class === 'B' ? item.priceB : item.priceC) + ''} />
+              <Title style={{ fontSize: 25, color: item.image === null ? Colors.mainColor : Colors.WHITE }} title={parseFloat(userInfo.class === 'A' ? item.priceA : userInfo.class === 'B' ? item.priceB : item.priceC) + ''} />
             </View>
           }
         </GridView>
@@ -377,9 +377,9 @@ const GridCard = ({
           cancelButtonTextStyle={{ fontFamily: 'Cairo-Regular' }}
           confirmButtonStyle={{ disabled: true, opacity: 0.5 }}
           confirmButtonTextStyle={{ fontFamily: 'Cairo-Regular' }}
-          cancelButtonColor={Colors.PURPLE}
+          cancelButtonColor={Colors.mainColor}
           cancelButtonStyle={{ width: 90, justifyContent: 'center', alignItems: 'center' }}
-          confirmButtonColor={Colors.PURPLE}
+          confirmButtonColor={Colors.mainColor}
           onDismiss={() => setShowAlert(false)}
           onCancelPressed={() => {
             onCancelPressed()

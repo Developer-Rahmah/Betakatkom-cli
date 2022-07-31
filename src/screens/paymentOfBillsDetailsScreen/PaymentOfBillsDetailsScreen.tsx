@@ -221,7 +221,7 @@ export default function PaymentOfBillsDetailsScreen() {
 
           <View style={styles.btnContainer}>
             <Button
-              backgroundColor={Colors.PURPLE}
+              backgroundColor={Colors.mainColor}
               locked={!isValid}
               onClick={handleSubmit(onSubmit)}
               title="Pay"
@@ -246,8 +246,8 @@ export default function PaymentOfBillsDetailsScreen() {
         messageStyle={{ fontFamily: 'Cairo-Regular' }}
         cancelButtonTextStyle={{ fontFamily: 'Cairo-Regular' }}
         confirmButtonTextStyle={{ fontFamily: 'Cairo-Regular' }}
-        cancelButtonColor={Colors.PURPLE}
-        confirmButtonColor={Colors.PURPLE}
+        cancelButtonColor={Colors.mainColor}
+        confirmButtonColor={Colors.mainColor}
         onDismiss={() => setShowAlert(false)}
         onCancelPressed={() => {
           setShowAlert(false);

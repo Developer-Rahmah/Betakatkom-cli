@@ -1,4 +1,4 @@
-import {Colors} from 'Cards/assets/styles/Colors';
+import { Colors } from 'Cards/assets/styles/Colors';
 import {
   SCREEN_HEIGHT,
   SCREEN_WIDTH,
@@ -53,7 +53,7 @@ export const GrayIndicator = styled.View`
 `;
 export const OrangeIndicator = styled.View<IOrangeIndicatorProps>`
   width: ${(props) => props.width};
-  background-color: ${Colors.PURPLE};
+  background-color: ${Colors.mainColor};
   height: 7px;
   border-radius: 10px;
 `;

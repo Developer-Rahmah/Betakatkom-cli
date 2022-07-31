@@ -43,7 +43,7 @@ const GamingColumnCard = ({
   return (
 
     <GamingCardContainer >
-      <TouchableCard onPress={() => navigation.navigate('CardDetailsScreen', { groupID: groupID, notChargeCard: notChargeCard, type: type, name: item.nameEnglish, title: title, subData: item.children, parentID: item.id, parentIndex: index })} style={[General.shadow, { backgroundColor: type == 0 ? Colors.BLACK : type == 1 ? Colors.ORANGE_COLOR : type == 2 ? Colors.UMNIAH_COLOR : Colors.LIGHT_PURPLE }]}>
+      <TouchableCard onPress={() => navigation.navigate('CardDetailsScreen', { groupID: groupID, notChargeCard: notChargeCard, type: type, name: item.nameEnglish, title: title, subData: item.children, parentID: item.id, parentIndex: index })} style={[General.shadow, { backgroundColor: type == 0 ? Colors.BLACK : type == 1 ? Colors.ORANGE_COLOR : type == 2 ? Colors.UMNIAH_COLOR : Colors.secondaryColor }]}>
         <ImageBackground imageStyle={{ borderRadius: 15 }} source={{ uri: item.image }} style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center' }} resizeMode='stretch'>
           <View style={{ width: '80%', height: 50, backgroundColor: Colors.BLACK, opacity: .7 }}>
             <Title style={{ fontSize: 23, }} fontFamily='Cairo-Regular' title={I18nManager.isRTL ? item.nameArabic : item.nameEnglish} color={Colors.GOLD} />

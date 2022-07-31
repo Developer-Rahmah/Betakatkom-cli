@@ -32,8 +32,6 @@ export default class HomeStack extends Component {
         <Stack.Screen name="ElectronicWalletsScreen" component={ElectronicWalletsScreen} />
         <Stack.Screen name="PaymentOfBillsScreen" component={PaymentOfBillsScreen} />
         <Stack.Screen name="PaymentOfBillsDetailsScreen" component={PaymentOfBillsDetailsScreen} />
-
-
       </Stack.Navigator>
     );
   }

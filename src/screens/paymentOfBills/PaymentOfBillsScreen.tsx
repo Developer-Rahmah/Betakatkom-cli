@@ -117,7 +117,7 @@ export default PaymentOfBillsScreen;
 
 const styles = StyleSheet.create({
   balanceCard: {
-    width: '50%', backgroundColor: Colors.PURPLE, borderRadius: 10, height: 100, justifyContent: 'center', alignItems: 'center', shadowOffset: {
+    width: '50%', backgroundColor: Colors.mainColor, borderRadius: 10, height: 100, justifyContent: 'center', alignItems: 'center', shadowOffset: {
       width: 1,
       height: 2,
 

@@ -1,24 +1,17 @@
-import Wallet from 'Cards/assets/icons/wallet.png';
 import Background from 'Cards/assets/images/background.jpeg';
-import Exit from "Cards/assets/icons/exit.png";
 import { Colors } from 'Cards/assets/styles/Colors';
 import General from 'Cards/assets/styles/General';
-import Layout from 'Cards/assets/styles/Layout';
 import Balance from 'Cards/src/components/Balance';
 import Header from 'Cards/src/components/Header';
-import Title from 'Cards/src/components/Title';
-import Card, { Cards } from 'Cards/src/screens/home/components/Card';
-import WalletCard from 'Cards/src/screens/home/components/WalletCard';
+import Card from 'Cards/src/screens/home/components/Card';
 import { SCREEN_HEIGHT, SCREEN_WIDTH } from 'Cards/src/services/helper/Constant';
 import React, { useEffect, useRef, useState } from 'react';
-import { Animated, FlatList, Image, ImageBackground, StyleSheet, View } from 'react-native';
+import { Animated, ImageBackground, StyleSheet, View } from 'react-native';
 import { AnimatedFlatList, AnimationType } from 'flatlist-intro-animations';
-import Orange from "Cards/assets/images/orange.png";
 import { useToast } from 'native-base';
 import { useSelector } from 'react-redux';
 import { Client } from 'Cards/src/services/config/clients';
 import { GET } from 'Cards/src/services/config/api';
-import { borderRadius, height, style } from 'styled-system';
 import { useRoute } from '@react-navigation/native';
 
 
@@ -123,7 +116,7 @@ export default HomeScreen;
 
 const styles = StyleSheet.create({
   balanceCard: {
-    width: '50%', backgroundColor: Colors.PURPLE, borderRadius: 10, height: 100, justifyContent: 'center', alignItems: 'center', shadowOffset: {
+    width: '50%', backgroundColor: Colors.mainColor, borderRadius: 10, height: 100, justifyContent: 'center', alignItems: 'center', shadowOffset: {
       width: 1,
       height: 2,
 

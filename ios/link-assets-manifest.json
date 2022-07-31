@@ -1,0 +1,25 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/Cairo-Bold.ttf",
+      "sha1": "2e6c9297671c23310e9319b2746eefe14fa11021"
+    },
+    {
+      "path": "assets/fonts/Cairo-Regular.ttf",
+      "sha1": "e5438704ef3d865611620c4e65bc663a6b11e599"
+    },
+    {
+      "path": "assets/fonts/Lalezar-Regular.ttf",
+      "sha1": "29615808f633f21f2070d1df54e394677fd11e00"
+    },
+    {
+      "path": "assets/fonts/MuseoModerno-Light.ttf",
+      "sha1": "1b46daf4c5f13b57c2c4f6e8a650b947f9b5b3ca"
+    },
+    {
+      "path": "assets/fonts/MuseoModerno-SemiBold.ttf",
+      "sha1": "5af436ce8b67e4e861b934b909a2d4436d130908"
+    }
+  ]
+}

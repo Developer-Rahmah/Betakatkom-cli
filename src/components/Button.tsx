@@ -5,6 +5,7 @@ import Layout from 'Cards/assets/styles/Layout';
 import General from 'Cards/assets/styles/General';
 import Title from './Title';
 import Elements from 'Cards/assets/styles/Elements';
+import LinearGradient from 'react-native-linear-gradient';
 
 export default function Button(props: {
   onClick: () => void;
@@ -26,13 +27,15 @@ export default function Button(props: {
     <TouchableOpacity
       onPress={handlePress}
       disabled={props.locked}
-      style={[
+    >
+      <LinearGradient style={[
         Layout.flexCenter,
         Elements.primaryButton,
         General.largeMarginVertical, {},
         { opacity: props.locked ? 0.3 : 1, ...props.style }
-      ]}>
-      <Title title={props.title} color={props.txtColor} />
+      ]} colors={[Colors.mainColor, Colors.primaryColor]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }}>
+        <Title title={props.title} color={props.txtColor} />
+      </LinearGradient>
     </TouchableOpacity>
   );
 }

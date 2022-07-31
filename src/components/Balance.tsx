@@ -53,7 +53,7 @@ export default Balance;
 
 const styles = StyleSheet.create({
   balanceCard: {
-    width: '50%', backgroundColor: Colors.PURPLE,
+    width: '50%', backgroundColor: Colors.mainColor,
     borderRadius: 30, height: SCREEN_HEIGHT / 20,
     justifyContent: 'center',
     alignItems: 'center', shadowOffset: {

@@ -15,7 +15,7 @@ const BottomTabButton = ({
   icon: ImageSourcePropType;
   focused: boolean;
   label: string;
-  rest:any
+  rest: any
 
 }) => {
   return (
@@ -25,24 +25,24 @@ const BottomTabButton = ({
         { borderTopColor: focused ? Colors.BLUE : Colors.LIGHT_GRAY }
       ]}
       {...rest}>
-      
-      {label===''?
-      <View >
-      <View style={label === "" ? [styles.blueCircle,{backgroundColor:focused ? Colors.PURPLE:Colors.LIGHT_GRAY}]  : null}>
-        <IconImage
-          small
-          source={icon}
-          color={
-            focused
-              ? Colors.WHITE
-              : label === ""
-              ? Colors.WHITE
-              : Colors.LIGHT_PURPLE
-          }
-        />
-      </View>
-      </View>
-      : 
+
+      {label === '' ?
+        <View >
+          <View style={label === "" ? [styles.blueCircle, { backgroundColor: focused ? Colors.mainColor : Colors.LIGHT_GRAY }] : null}>
+            <IconImage
+              small
+              source={icon}
+              color={
+                focused
+                  ? Colors.WHITE
+                  : label === ""
+                    ? Colors.WHITE
+                    : Colors.secondaryColor
+              }
+            />
+          </View>
+        </View>
+        :
         <View style={label === "" ? [styles.blueCircle, {
           top: -30
         }] : null}>
@@ -51,23 +51,23 @@ const BottomTabButton = ({
             source={icon}
             color={
               focused
-                ? Colors.PURPLE
+                ? Colors.mainColor
                 : label === "" || label === 'Settings'
                   ? Colors.WHITE
                   : Colors.WHITE
-                  
+
             }
           />
         </View>
-}
+      }
       <Title fontFamily='Cairo-Regular' color={
         focused
-          ? Colors.PURPLE
+          ? Colors.mainColor
           : label === "" || label === 'Settings'
             ? Colors.WHITE
             : Colors.WHITE
 
-      } title={label} style={{width:SCREEN_WIDTH/5}} />
+      } title={label} style={{ width: SCREEN_WIDTH / 5 }} />
     </TouchableOpacity>
   );
 };
@@ -86,11 +86,11 @@ const styles = StyleSheet.create({
     padding: 20,
     borderRadius: 60,
     width: 90,
-    height: 90,justifyContent:'center',alignItems: 'center',
+    height: 90, justifyContent: 'center', alignItems: 'center',
     marginHorizontal: 15,
-    marginRight:0,
-    backgroundColor: Colors.PURPLE, 
-     top: -20,
+    marginRight: 0,
+    backgroundColor: Colors.mainColor,
+    top: -20,
     shadowOffset: {
       width: 1,
       height: 2,

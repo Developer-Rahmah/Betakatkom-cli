@@ -48,7 +48,7 @@ const NotificationCard = ({
             <Title style={{ fontSize: SCREEN_WIDTH / 20, textAlign: 'center', }} fontFamily='Cairo-Bold' title={'JOD'} numberOfLines={0} color={item.type === 1 ? 'green' : Colors.RED} />
           </View>
           <View style={{ width: '100%', alignItems: 'flex-start', paddingStart: 40 }}>
-            <Title style={{ fontSize: SCREEN_WIDTH / 25, textAlign: 'left', marginTop: -9 }} fontFamily='Cairo-Regular' title={date.format('YYYY-MM-DD') + ''} numberOfLines={0} color={Colors.PURPLE} />
+            <Title style={{ fontSize: SCREEN_WIDTH / 25, textAlign: 'left', marginTop: -9 }} fontFamily='Cairo-Regular' title={date.format('YYYY-MM-DD') + ''} numberOfLines={0} color={Colors.mainColor} />
           </View>
         </View>
 

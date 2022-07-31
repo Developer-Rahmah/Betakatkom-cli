@@ -1,9 +1,6 @@
 import {Dimensions, I18nManager, StyleSheet} from 'react-native';
 import {Colors} from 'Cards/assets/styles/Colors';
-import {
-  SCREEN_HEIGHT,
-  SCREEN_WIDTH,
-} from 'Cards/src/services/helper/Constant';
+import {SCREEN_HEIGHT, SCREEN_WIDTH} from 'Cards/src/services/helper/Constant';
 
 const Elements = StyleSheet.create({
   title: {
@@ -22,7 +19,7 @@ const Elements = StyleSheet.create({
     padding: 5,
   },
   selectedRadio: {
-    backgroundColor: Colors.PURPLE,
+    backgroundColor: Colors.mainColor,
     borderRadius: 50,
     width: '100%',
     height: '100%',
@@ -52,7 +49,7 @@ const Elements = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 5,
-    backgroundColor: Colors.PURPLE,
+    backgroundColor: Colors.mainColor,
   },
 
   searchInputContainer: {
@@ -63,13 +60,13 @@ const Elements = StyleSheet.create({
   },
   inputContainer: {
     paddingHorizontal: 10,
-    marginVertical: 10,
-    borderRadius: 5,
+    marginVertical: 15,
     margin: 0,
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 1,
+    borderRadius: 25,
   },
   helpBtn: {
     paddingVertical: Dimensions.get('window').width / 240,

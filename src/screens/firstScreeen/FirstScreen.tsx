@@ -18,46 +18,13 @@ import Exit from "Cards/assets/icons/exit.png";
 
 
 const FirstScreen = () => {
-  // const [bleManager, setBleManager] = useState(new BleManager())
-  const data = [
-    { name: 'Charge Cards       Print', type: 0 },
-    { name: `Charge Cards       Direct Charging`, type: 4 },
-    { name: 'Gaming Cards', type: 1 },
-    { name: 'Pay bills', type: 2 },
-    { name: 'Stores and chanels', type: 3 },
-    { name: 'Electronic wallets', type: 5 },
-  ]
-  // const bleManager = new BleManager();
+
 
   return (
     <>
       <Header exit leftIcon={Exit} />
       <ImageBackground resizeMode='repeat' style={[General.flex, Layout.flexCenter]} source={Background}>
-        <Balance />
-        <View style={{ width: '100%', justifyContent: 'center', alignItems: 'center', paddingTop: 25 }}>
-          <View style={styles.stepIndicator}>
-          </View>
 
-
-        </View>
-
-        <AnimatedFlatList
-          contentContainerStyle={{ width: SCREEN_WIDTH }}
-          animationType={AnimationType.SlideFromRight}
-          animationDuration={1000}
-          focused={true}
-          numColumns={2}
-          data={data}
-          renderItem={({ item, index }) => {
-            return (
-              <CardType
-                item={item}
-                index={index}
-
-              />
-            );
-          }}
-        />
       </ImageBackground>
     </>
   );
@@ -94,7 +61,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
     textAlign: 'center',
     fontWeight: '500',
-    color: Colors.PURPLE,
+    color: Colors.mainColor,
   },
 
 

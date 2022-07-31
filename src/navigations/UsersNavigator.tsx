@@ -13,7 +13,9 @@ const UsersNavigator = () => {
 
   return (
 
-    <Tab.Navigator initialRouteName="HomeStack"
+    <Tab.Navigator screenOptions={{
+      headerShown: false
+    }} initialRouteName="HomeStack"
       tabBar={(props) => <BottomTab {...props} />}>
 
       <Tab.Screen

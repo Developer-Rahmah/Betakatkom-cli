@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Alert, I18nManager, ImageSourcePropType, StyleSheet, TouchableOpacity, View } from "react-native";
-import Logo from "Cards/assets/images/logo.png";
+import Logo from "Cards/assets/images/alwafeer-logo-with-background.jpeg";
 import { Colors } from "Cards/assets/styles/Colors";
 import IconImage from "Cards/src/components/IconImage";
 // import Exit from 'Cards/assets/images/exit-icon.png'
@@ -89,8 +89,8 @@ export const Header = ({
         messageStyle={{ fontFamily: 'Cairo-Regular' }}
         cancelButtonTextStyle={{ fontFamily: 'Cairo-Regular' }}
         confirmButtonTextStyle={{ fontFamily: 'Cairo-Regular' }}
-        cancelButtonColor={Colors.PURPLE}
-        confirmButtonColor={Colors.PURPLE}
+        cancelButtonColor={Colors.mainColor}
+        confirmButtonColor={Colors.mainColor}
         onCancelPressed={() => {
           setShowAlert(false);
         }}

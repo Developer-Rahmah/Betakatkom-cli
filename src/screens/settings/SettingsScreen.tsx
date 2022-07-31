@@ -20,6 +20,7 @@ import Info from 'Cards/assets/icons/info.png'
 import Padlock from 'Cards/assets/icons/padlock.png'
 // import { printAsync, selectPrinterAsync } from 'expo-print';
 import Information from 'Cards/assets/icons/printing.png';
+import RNRestart from 'react-native-restart';
 
 const printerUrl = 'ipp://BRW2C6FC9173DCB.local.:631/ipp/print'
 
@@ -36,7 +37,6 @@ export default function SettingsScreen() {
   useEffect(() => {
     getLang();
   }, []);
-  console.log('language', lang);
   const navigation = useNavigation();
   const [isNotificationsOn, setIsNotificationsOn] = useState(false);
   const [isEN, setIsEN] = useState(lang === 'en');
@@ -48,7 +48,7 @@ export default function SettingsScreen() {
     dispatch(setLanguageAction(lang === 'ar' ? 'en' : 'ar'));
     LocalStorage.set('lang', lang === 'ar' ? 'en' : 'ar');
     I18nManager.forceRTL(lang === 'en');
-    // Updates.reloadAsync();
+    RNRestart.Restart();
   };
   const dispatch = useDispatch()
   const [showAlert, setShowAlert] = useState()
@@ -61,11 +61,7 @@ export default function SettingsScreen() {
     dispatch(setAuthTokenAction(null));
     LocalStorage.set('authToken', null);
   }
-  const styles = StyleSheet.create({
-    marginEnd: {
-      marginEnd: 3,
-    },
-  });
+
   //   const printSingle = useCallback(async () => {
 
   //     try {
@@ -178,30 +174,18 @@ export default function SettingsScreen() {
       <ScrollView>
         <ContainerView>
           <View
-            style={{
-              flexDirection: 'row',
-              width: '100%',
-              borderWidth: 1,
-              marginVertical: 20,
-              padding: 20,
-              borderColor: Colors.LIGHT_PURPLE,
-              justifyContent: 'space-between',
-            }}>
+            style={styles.switchLangContainer}>
             <Title title="Language" />
             <View
-              style={{
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
+              style={styles.enContainer}>
               <Title title="EN" />
               <Switch
-                style={{ marginHorizontal: 10 }}
+                style={styles.switch}
                 trackColor={{
                   false: Colors.LIGHT_GRAY,
                   true: Colors.LIGHT_GRAY,
                 }}
-                thumbColor={Colors.PURPLE}
+                thumbColor={Colors.mainColor}
                 ios_backgroundColor={Colors.LIGHT_GRAY}
                 onValueChange={toggleSwitchLang}
                 value={isEN}
@@ -209,18 +193,15 @@ export default function SettingsScreen() {
               <Title title="AR" />
             </View>
           </View>
-          {/* <TouchableOpacity
-            onPress={async () => {
-              const printer = Platform.OS == 'android' ? await printSingle() : selectPrinterAsync()
-              console.log('printer', printer)
-            }}
+
+          <TouchableOpacity
+            onPress={() => navigation.navigate('BluetoothScanner')}
             style={{
               flexDirection: 'row',
               width: '100%',
               borderWidth: 1,
-              marginVertical: 0,
               padding: 20,
-              borderColor: Colors.LIGHT_PURPLE,
+              borderColor: Colors.secondaryColor,
               justifyContent: 'space-between',
             }}>
             <Title title="Test Printer" />
@@ -231,12 +212,12 @@ export default function SettingsScreen() {
                 alignItems: 'center',
               }}>
               <IconImage
-                small source={Information} style={{ tintColor: 'black' }} />
+                small source={Padlock} />
 
             </View>
-          </TouchableOpacity> */}
+          </TouchableOpacity>
 
-          <TouchableOpacity
+          {/* <TouchableOpacity
             onPress={() => navigation.navigate('ChangePasswordScreen')}
             style={{
               flexDirection: 'row',
@@ -244,7 +225,7 @@ export default function SettingsScreen() {
               borderWidth: 1,
               marginVertical: 20,
               padding: 20,
-              borderColor: Colors.LIGHT_PURPLE,
+              borderColor: Colors.secondaryColor,
               justifyContent: 'space-between',
             }}>
             <Title title="Change Password" />
@@ -267,7 +248,7 @@ export default function SettingsScreen() {
               borderWidth: 1,
               marginVertical: 0,
               padding: 20,
-              borderColor: Colors.LIGHT_PURPLE,
+              borderColor: Colors.secondaryColor,
               justifyContent: 'space-between',
             }}>
             <Title title="About Us" />
@@ -292,7 +273,7 @@ export default function SettingsScreen() {
               borderWidth: 1,
               marginVertical: 20,
               padding: 20,
-              borderColor: Colors.LIGHT_PURPLE,
+              borderColor: Colors.secondaryColor,
               justifyContent: 'space-between',
             }}>
             <Title title="Conditions and terms" />
@@ -317,7 +298,7 @@ export default function SettingsScreen() {
               borderWidth: 1,
               marginVertical: 0,
               padding: 20,
-              borderColor: Colors.LIGHT_PURPLE,
+              borderColor: Colors.secondaryColor,
               justifyContent: 'space-between',
             }}>
             <Title title="Log out" />
@@ -340,7 +321,7 @@ export default function SettingsScreen() {
               }} small source={Exit} />
 
             </View>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
 
 
           <AwesomeAlert
@@ -358,8 +339,8 @@ export default function SettingsScreen() {
             messageStyle={{ fontFamily: 'Cairo-Regular' }}
             cancelButtonTextStyle={{ fontFamily: 'Cairo-Regular' }}
             confirmButtonTextStyle={{ fontFamily: 'Cairo-Regular' }}
-            cancelButtonColor={Colors.PURPLE}
-            confirmButtonColor={Colors.PURPLE}
+            cancelButtonColor={Colors.mainColor}
+            confirmButtonColor={Colors.mainColor}
             onDismiss={() => setShowAlert(false)}
             onCancelPressed={() => {
               setShowAlert(false);
@@ -373,3 +354,22 @@ export default function SettingsScreen() {
     </>
   );
 }
+const styles = StyleSheet.create({
+  switchLangContainer: {
+    flexDirection: 'row',
+    width: '100%',
+    borderWidth: 1,
+    marginVertical: 20,
+    padding: 20,
+    borderColor: Colors.secondaryColor,
+    justifyContent: 'space-between',
+  },
+  enContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  switch: {
+    marginHorizontal: 10
+  }
+})

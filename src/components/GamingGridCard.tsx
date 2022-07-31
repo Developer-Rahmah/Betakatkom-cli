@@ -190,7 +190,7 @@ const GamingGridCard = ({
   console.log("itemitem", item)
   return (
     <TouchableOpacity onPress={() => setShowAlert(true)}>
-      <GridCardContainer style={[General.shadow, { backgroundColor: type == 0 ? Colors.BLACK : type == 1 ? Colors.ORANGE_COLOR : type == 2 ? Colors.UMNIAH_COLOR : Colors.LIGHT_PURPLE }]} >
+      <GridCardContainer style={[General.shadow, { backgroundColor: type == 0 ? Colors.BLACK : type == 1 ? Colors.ORANGE_COLOR : type == 2 ? Colors.UMNIAH_COLOR : Colors.secondaryColor }]} >
         <GridView imageStyle={{ borderRadius: 15, resizeMode: 'contain' }} source={{ uri: item.image }} >
           <Animated.View style={{ transform: [{ scale: anim.current }] }}>
             <View style={{ width: SCREEN_WIDTH / 3, height: '90%', backgroundColor: Colors.BLACK, opacity: .7, marginTop: 0, justifyContent: 'center' }}>
@@ -221,9 +221,9 @@ const GamingGridCard = ({
           cancelButtonTextStyle={{ fontFamily: 'Cairo-Regular' }}
           confirmButtonStyle={{ disabled: true, opacity: 0.5 }}
           confirmButtonTextStyle={{ fontFamily: 'Cairo-Regular' }}
-          cancelButtonColor={Colors.PURPLE}
+          cancelButtonColor={Colors.mainColor}
           cancelButtonStyle={{ width: 90, justifyContent: 'center', alignItems: 'center' }}
-          confirmButtonColor={Colors.PURPLE}
+          confirmButtonColor={Colors.mainColor}
           onDismiss={() => setShowAlert(false)}
           onCancelPressed={() => {
             onCancelPressed()

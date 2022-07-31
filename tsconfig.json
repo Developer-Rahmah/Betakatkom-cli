@@ -5,10 +5,18 @@
   "typeRoots": ["./types", "./node_modules/@types"],
 
   "compilerOptions": {
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+     "target": "es2015",
+    "module": "commonjs",
+    "resolveJsonModule": true,
     "baseUrl": ".",
+    "jsx": "react",
+    "strict": true,
     "paths": {
       "Cards/*": ["*"]
     },
     "lib": ["es5", "es6", "dom", "dom.iterable"]
-  }
+  },
 }

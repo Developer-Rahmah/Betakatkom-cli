@@ -68,7 +68,7 @@ export const Card = styled.ImageBackground`
   border-radius: 15px;
   justify-content: center;
   align-items: center;
-  background-color:${Colors.LIGHT_PURPLE}
+  background-color:${Colors.secondaryColor}
   
 `;
 export const TouchableCard = styled.TouchableOpacity`
@@ -77,7 +77,7 @@ export const TouchableCard = styled.TouchableOpacity`
   border-radius: 15px;
   justify-content: center;
   align-items: center;
-  background-color:${Colors.LIGHT_PURPLE}
+  background-color:${Colors.secondaryColor}
   
 `;
 export const SmallCard = styled.View`
@@ -86,10 +86,10 @@ export const SmallCard = styled.View`
   border-radius: 0px;
   justify-content: flex-start;
   align-items: center;
-  background-color:${Colors.LIGHT_PURPLE};
+  background-color:${Colors.secondaryColor};
   margin_top:-15;
   border-bottom-width: 2px;
-  border-color: ${Colors.PURPLE}
+  border-color: ${Colors.mainColor}
   
 
   
@@ -107,6 +107,6 @@ export const Button = styled.TouchableOpacity`
   align-items: center;
   flex-direction: row;
   padding-vertical: 5px;
-  background-color: ${Colors.PURPLE};
+  background-color: ${Colors.mainColor};
   border-radius: 5px;
 `;

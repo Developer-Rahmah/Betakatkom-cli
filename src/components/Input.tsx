@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {
   ImageSourcePropType,
   KeyboardType,
+  TextInput,
   TouchableOpacity,
   View,
 } from 'react-native';
@@ -11,7 +12,6 @@ import Elements from 'Cards/assets/styles/Elements';
 import Layout from 'Cards/assets/styles/Layout';
 import Eye from 'Cards/assets/icons/eye.png';
 import EyeWithLine from 'Cards/assets/icons/eye-with-line.png';
-import { TypingAnimation } from 'react-native-typing-animation';
 
 import IconImage from './IconImage';
 import { useTranslation } from '../services/hooks';
@@ -23,7 +23,7 @@ export default function Input({
   leftIcon: leftIcon,
   placeholder,
   isPassword,
-  maxLength = null
+  maxLength = undefined,
 }: {
   onChangeText?: any;
   value?: string;
@@ -32,7 +32,7 @@ export default function Input({
   leftIcon?: ImageSourcePropType;
   placeholder?: string;
   isPassword?: boolean;
-  maxLength?: number;
+  maxLength?: number | undefined;
 }) {
   const [showPassword, setShowPassword] = useState(isPassword);
   const [isFocused, setIsFocused] = useState(false);
@@ -55,39 +55,32 @@ export default function Input({
   const renderLeftAccessory = () => {
     return <IconImage small style={{ marginEnd: 10 }} source={leftIcon} />;
   };
-  const _typing = () => {
-    return (
-      <TypingAnimation
-        dotColor="#93278f"
-        style={{ marginRight: 25 }}
-      />
-    )
-  }
+
   return (
     <>
-      <TextField
+      <TextInput
         maxLength={maxLength}
-        variant="outlined"
-        renderRightAccessory={() => renderRightAccessory()}
-        renderLeftAccessory={() => renderLeftAccessory()}
-        label={t(placeholder)}
+        // variant="outlined"
+        // renderRightAccessory={() => renderRightAccessory()}
+        // renderLeftAccessory={() => renderLeftAccessory()}
+        // label={t(placeholder)}
         secureTextEntry={showPassword}
         onBlur={() => setIsFocused(false)}
-        lineWidth={0}
-        labelTextStyle={{ color: 'red', fontSize: 10, top: -12 }}
-        activeLineWidth={0}
-        style={{ justifyContent: 'center', alignItems: 'center' }}
+        // lineWidth={0}
+        // labelTextStyle={{ color: 'red', fontSize: 10, top: -12 }}
+        // activeLineWidth={0}
+        // style={{ justifyContent: 'center', alignItems: 'center' }}
         onFocus={() => { setIsFocused(true) }}
-        baseColor={Colors.LIGHT_GRAY}
+        // baseColor={Colors.LIGHT_GRAY}
         // affixTextStyle={{marginTop: -20}}
         // contentInset={{input: -5}}
         keyboardType={keyboardType}
-        inputContainerStyle={[Layout.flexCenter, { height: 50 }]}
+        // inputContainerStyle={[Layout.flexCenter, { height: 50 }]}
         // tvParallaxShiftDistanceY={-100}
         onChangeText={onChangeText}
-        containerStyle={[
+        style={[
           Elements.inputContainer,
-          { borderColor: isFocused ? Colors.PURPLE : Colors.LIGHT_GRAY, }
+          { borderColor: isFocused ? 'rgb(238,164,64)' : Colors.LIGHT_GRAY, color: Colors.WHITE, }
         ]}
       />
 

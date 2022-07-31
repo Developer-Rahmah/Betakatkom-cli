@@ -366,7 +366,7 @@ const DetailsScreen = () => {
                 description: 'تم نسخ الكود',
                 width: SCREEN_WIDTH,
               })
-            }} style={{ justifyContent: 'center', alignItems: 'center', position: "absolute", top: '70%', right: '81%', borderRadius: 30, width: 60, height: 60, backgroundColor: Colors.PURPLE }}>
+            }} style={{ justifyContent: 'center', alignItems: 'center', position: "absolute", top: '70%', right: '81%', borderRadius: 30, width: 60, height: 60, backgroundColor: Colors.mainColor }}>
               <IconImage
                 small
                 source={Copying}
@@ -491,7 +491,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
     textAlign: 'center',
     fontWeight: '500',
-    color: Colors.PURPLE,
+    color: Colors.mainColor,
   },
   centeredView: {
     flex: 1,
